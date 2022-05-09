@@ -71,8 +71,14 @@ window.addEventListener("scroll", checkScroll);
 //slider
 $(document).ready(function () {
     $('.slider').slick({
-        arrows:false,
+        arrows: false,
         adaptiveHeight: false,
         dots: true,
     });
 });
+
+//width
+document.addEventListener('resize', calcWidth());
+function calcWidth() {
+    header.style.maxWidth = `${header.offsetWidth}px`;
+}
